@@ -1,36 +1,37 @@
 /* Basic Style */
-body {
+.page {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
 }
-.aaa {
+
+.container {
+  display: block;
   width: 500px;
   margin: 0 auto;
-  display: block;
-
 }
-.aaa img {
+
+.header__img {
   width: 100%;
 }
-.aaa .more_inf {
-  font-family: fantasy, cursive;
-}
+
 .header__title {
   font-size: 16px;
-  font-family: Lato, cursive;
+  font-family: 'Lato', sans-serif;
   text-align: right;
 }
 
 @media (max-width:768px) {
-.aaa { text-align: center;
+  .header__title { 
+    text-align: center;
+  }
 }
-}
-.centered-main-page-element {
+
+/* .centered-main-page-element {
   display: block;
   width: 500px;
   margin: 0 auto 0;
-}
+} */
 .task {
   width: 56%;
   display: inline-block;
@@ -43,6 +44,7 @@ ul {
   margin:0;
   padding: 0px;
 }
+
 li, h2 {
   list-style:none;
 }
