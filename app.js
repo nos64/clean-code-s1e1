@@ -10,7 +10,7 @@
 
 var taskInput=document.getElementById('new-task');//Add a new task.
 var addButton=document.querySelector('.button-add');//first button
-var incompleteTaskHolder=document.getElementById('incompleteTasks');//ul of #incompleteTasks
+var incompleteTaskHolder=document.getElementById('incomplete-tasks');//ul of #incompleteTasks
 var completedTasksHolder=document.getElementById('completed-tasks');//completed-tasks
 
 
@@ -136,6 +136,13 @@ var taskCompleted=function(){
   // listItem.classList.toggle('complete-task__list');
   bindTaskEvents(listItem, taskIncomplete);
 
+  var label=listItem.querySelector('.task-item__label');
+  var containsClass=listItem.classList.contains('complete-task__list');
+  if (!containsClass) {
+    label.classList.add('task-item__label-compete');
+  }else {
+    label.classList.remove('task-item__label-compete'); 
+  }
 }
 
 

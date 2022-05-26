@@ -11,14 +11,21 @@
   margin: 0 auto;
 }
 
+.header {
+  text-align: right;
+}
+
 .header__img {
   width: 100%;
 }
 
-.header__title {
+.header__link {
+  padding: 0;
+  margin: 0;
   font-size: 16px;
-  font-family: 'Lato', sans-serif;
-  text-align: right;
+  font-weight: 400;
+  font-family: fantasy, cursive;
+  line-height: 80%;
 }
 
 .task {
@@ -29,6 +36,10 @@
 
 .new-task__wrapper {
   display: flex;
+}
+
+.new-task {
+  margin: 10px 0;
 }
 
 .task-list {
