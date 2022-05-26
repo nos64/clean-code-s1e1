@@ -90,19 +90,21 @@ var editTask=function(){
   var listItem=this.parentNode;
 
   var editInput=listItem.querySelector('.task-item__text');
-  console.log('editInput: ', editInput);
   var label=listItem.querySelector('.task-item__label');
-  console.log('label: ', label);
   var editBtn=listItem.querySelector('.button-edit');
   var containsClass=listItem.classList.contains('edit-mode');
   //If class of the parent is .editmode
   if(containsClass){
-
+    
       //switch to .editmode
       //label becomes the inputs value.
+      label.classList.remove('task-item__label-edit');
+      editInput.classList.remove('task-item__text-edit');
       label.innerText=editInput.value;
       editBtn.innerText='Edit';
   }else{
+      label.classList.add('task-item__label-edit');
+      editInput.classList.add('task-item__text-edit');
       editInput.value=label.innerText;
       editBtn.innerText='Save';
   }
@@ -131,6 +133,7 @@ var taskCompleted=function(){
   //Append the task list item to the #completed-tasks
   var listItem=this.parentNode;
   completedTasksHolder.appendChild(listItem);
+  // listItem.classList.toggle('complete-task__list');
   bindTaskEvents(listItem, taskIncomplete);
 
 }
@@ -144,6 +147,16 @@ var taskIncomplete=function(){
   var listItem=this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem,taskCompleted);
+
+  var label=listItem.querySelector('.task-item__label');
+  var containsClass=listItem.classList.contains('complete-task__list');
+  if (containsClass) {
+    label.classList.add('task-item__label-compete');
+  }else {
+    label.classList.remove('task-item__label-compete'); 
+  }
+
+
 }
 
 
@@ -164,7 +177,7 @@ addButton.addEventListener('click',ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log('bind list item events');
 //select ListItems children
-  var checkBox=taskListItem.querySelector('input[type=checkbox]');
+  var checkBox=taskListItem.querySelector('.task-item__checkbox');
   var editButton=taskListItem.querySelector('.button-edit');
   var deleteButton=taskListItem.querySelector('.button-delete');
 

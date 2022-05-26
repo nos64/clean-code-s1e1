@@ -21,12 +21,6 @@
   text-align: right;
 }
 
-@media (max-width:768px) {
-  .header__title { 
-    text-align: center;
-  }
-}
-
 .task {
   width: 56%;
   display: inline-block;
@@ -42,42 +36,33 @@
   padding: 0px;
 }
 
-li,
-h2 {
-  list-style:none;
-}
 
-input,
-button{
-  outline:none;
-}
-
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
   font-size: 15px;
   width: 60px;
-  font-family: Lato, sans-serif;
+  font-family: 'Lato', sans-serif;
   cursor: pointer;
+  outline:none;
 }
 
-button:hover {
+.button:hover {
   color: #3a3a3a;
 }
 
-.task-title {
+.section-title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
   text-transform: uppercase;
+  border-bottom: 2px solid #333;
 }
 
-/* Heading */
-/* h2, */
+.complete-task__title,
 .incomplete-task__title,
 .new-task__label {
-/* label[for="new-task"] { */
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -87,7 +72,8 @@ button:hover {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.new-task__text,
+.task-item__text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -96,27 +82,28 @@ input[type="text"] {
   border: 1px solid #ddd;
   background: #fff;
   border-radius: 6px;
+  outline: none;
   font-family: Lato, sans-serif;
   color: #888;
 }
 
-input[type="text"]:focus {
+.new-task__text,
+.task-item__text:focus {
   color: #333;
 }
 
 /* New Task */
 .new-task__label {
-/* label[for="new-task"] { */
   display: block;
   margin: 0 0 20px;
 }
 
-input #new-task {
+.new-task__text {
   width: 318px;
 }
 
 /* Task list */
-li {
+.task-item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -125,22 +112,22 @@ li {
   align-items: center;
 }
 
-li > * {
+.task-item {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.task-item__checkbox {
   margin: 0 10px;
 }
 
-li > label {
+.task-item__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li > input[type="text"] {
+.task-item__text {
   width: 226px;
 }
 
@@ -154,22 +141,28 @@ li > input[type="text"] {
   transform: rotateZ(0);
 }
 
-/* Completed */
-ul #completed-tasks label {
+.task-item__label-compete {
   text-decoration: line-through;
   color: #888;
 }
 
-/* Edit Task */
-ul li input[type="text"] {
+.task-item__text {
   display: none;
 }
 
-ul li.edit-mode input[type="text"] {
+.task-item__text-edit {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.task-item__label-edit {
   display: none;
+}
+
+@media (max-width:768px) {
+  
+  .header__title { 
+    text-align: center;
+  }
+
 }
