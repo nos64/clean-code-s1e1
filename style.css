@@ -33,11 +33,11 @@
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.new-task__wrapper {
   display: flex;
 }
 
-ul {
+.task-list {
   margin:0;
   padding: 0px;
 }
@@ -66,9 +66,18 @@ button:hover {
   color: #3a3a3a;
 }
 
+.task-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
 /* Heading */
-h2,
-label[for="new-task"] {
+/* h2, */
+.incomplete-task__title,
+.new-task__label {
+/* label[for="new-task"] { */
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -96,7 +105,8 @@ input[type="text"]:focus {
 }
 
 /* New Task */
-label[for="new-task"] {
+.new-task__label {
+/* label[for="new-task"] { */
   display: block;
   margin: 0 0 20px;
 }
@@ -134,13 +144,13 @@ li > input[type="text"] {
   width: 226px;
 }
 
-button .delete img {
+.button-delete__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button .delete img:hover {
+.button-delete__img:hover {
   transform: rotateZ(0);
 }
 
@@ -160,6 +170,6 @@ ul li.editMode input[type="text"] {
   width: 224px;
 }
 
-ul li .editMode label {
+ul li.editMode label {
   display: none;
 }
