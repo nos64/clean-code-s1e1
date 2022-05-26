@@ -1,4 +1,3 @@
-/* Basic Style */
 .page {
   background-color: #f8f8f8;
   color: #333;
@@ -19,13 +18,16 @@
   width: 100%;
 }
 
-.header__link {
-  padding: 0;
+.header__title {
   margin: 0;
+  padding: 0;
+  line-height: 100%;
   font-size: 16px;
+}
+
+.header__link {
   font-weight: 400;
   font-family: fantasy, cursive;
-  line-height: 80%;
 }
 
 .task {
@@ -34,19 +36,18 @@
   flex-grow: 1;
 }
 
-.new-task__wrapper {
-  display: flex;
+.new-task {
+  margin: 16px 0;
 }
 
-.new-task {
-  margin: 10px 0;
+.new-task__wrapper {
+  display: flex;
 }
 
 .task-list {
   margin:0;
   padding: 0px;
 }
-
 
 .button {
   background: none;
