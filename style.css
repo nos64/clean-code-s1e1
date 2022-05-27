@@ -104,7 +104,6 @@
   color: #333;
 }
 
-/* New Task */
 .new-task__label {
   display: block;
   margin: 0 0 20px;
@@ -114,7 +113,6 @@
   width: 318px;
 }
 
-/* Task list */
 .task-item {
   overflow: hidden;
   padding: 20px 0;
