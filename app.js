@@ -47,6 +47,7 @@ const createNewTaskElement = (taskString) => {
   deleteButton.classList.add('button-delete');
   deleteButton.classList.add('button');
   deleteButtonImg.src = './remove.svg';
+  deleteButtonImg.alt = 'remove button image';
   deleteButtonImg.className = 'button-delete__img';
   deleteButton.append(deleteButtonImg);
 
@@ -67,7 +68,7 @@ const addTask = () => {
   const listItem = createNewTaskElement(taskInput.value);
 
   //Append listItem to incompleteTaskHolder
-  incompleteTaskHolder.appendChild(listItem);
+  incompleteTaskHolder.append(listItem);
   bindTaskEvents(listItem, taskCompleted);
 
   taskInput.value = '';
